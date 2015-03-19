@@ -9,7 +9,7 @@
 
 <div ng-app="myApp" ng-controller="myCtrl">
 
-  Name : <input type="name" ng-bind="name"/> <button ng-click="Add()">Add</button>
+  Name : <input type="name" ng-model="name"/> <button ng-click="Add()">Add</button>
 	<p ng-show="name"</p>
   <h2>Names are : </h2>
   <ul>
@@ -22,7 +22,6 @@ var app = angular.module('myApp', []);
 app.controller('myCtrl', function($scope) {
     $scope.names=["SKC","SK"];
     $scope.Add=function(){
-		alert($scope.name);
 		$scope.names.push($scope.name);
 		$scope.name="";
     }
